@@ -13,6 +13,9 @@
 		2B767EC11DE53D79004E7D19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B767EBF1DE53D79004E7D19 /* Main.storyboard */; };
 		2B767EC31DE53D79004E7D19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B767EC21DE53D79004E7D19 /* Assets.xcassets */; };
 		2B767EC61DE53D79004E7D19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B767EC41DE53D79004E7D19 /* LaunchScreen.storyboard */; };
+		2B767ECF1DE53E30004E7D19 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B767ECE1DE53E30004E7D19 /* Cell.m */; };
+		2B767ED21DE53EFE004E7D19 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B767ED11DE53EFE004E7D19 /* CollectionViewCell.m */; };
+		2B767ED51DE54457004E7D19 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B767ED41DE54457004E7D19 /* DataModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		2B767EC21DE53D79004E7D19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B767EC51DE53D79004E7D19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B767EC71DE53D79004E7D19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B767ECD1DE53E30004E7D19 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		2B767ECE1DE53E30004E7D19 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		2B767ED01DE53EFE004E7D19 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		2B767ED11DE53EFE004E7D19 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		2B767ED31DE54457004E7D19 /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		2B767ED41DE54457004E7D19 /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +71,13 @@
 				2B767EBA1DE53D79004E7D19 /* AppDelegate.m */,
 				2B767EBC1DE53D79004E7D19 /* ViewController.h */,
 				2B767EBD1DE53D79004E7D19 /* ViewController.m */,
-				2B767EBF1DE53D79004E7D19 /* Main.storyboard */,
-				2B767EC21DE53D79004E7D19 /* Assets.xcassets */,
-				2B767EC41DE53D79004E7D19 /* LaunchScreen.storyboard */,
-				2B767EC71DE53D79004E7D19 /* Info.plist */,
 				2B767EB61DE53D79004E7D19 /* Supporting Files */,
+				2B767ECD1DE53E30004E7D19 /* Cell.h */,
+				2B767ECE1DE53E30004E7D19 /* Cell.m */,
+				2B767ED01DE53EFE004E7D19 /* CollectionViewCell.h */,
+				2B767ED11DE53EFE004E7D19 /* CollectionViewCell.m */,
+				2B767ED31DE54457004E7D19 /* DataModel.h */,
+				2B767ED41DE54457004E7D19 /* DataModel.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -74,6 +85,10 @@
 		2B767EB61DE53D79004E7D19 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2B767EBF1DE53D79004E7D19 /* Main.storyboard */,
+				2B767EC21DE53D79004E7D19 /* Assets.xcassets */,
+				2B767EC41DE53D79004E7D19 /* LaunchScreen.storyboard */,
+				2B767EC71DE53D79004E7D19 /* Info.plist */,
 				2B767EB71DE53D79004E7D19 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -151,8 +166,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B767EBE1DE53D79004E7D19 /* ViewController.m in Sources */,
+				2B767ED21DE53EFE004E7D19 /* CollectionViewCell.m in Sources */,
+				2B767ECF1DE53E30004E7D19 /* Cell.m in Sources */,
 				2B767EBB1DE53D79004E7D19 /* AppDelegate.m in Sources */,
 				2B767EB81DE53D79004E7D19 /* main.m in Sources */,
+				2B767ED51DE54457004E7D19 /* DataModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

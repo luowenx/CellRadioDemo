@@ -7,22 +7,55 @@
 //
 
 #import "ViewController.h"
+#import "Cell.h"
+#import "DataModel.h"
+static NSString *cellID = @"cell";
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 
-@interface ViewController ()
+@property (strong, nonatomic) NSArray *dataArray;
+
 
 @end
 
-@implementation ViewController
+@implementation ViewController{
+    UITableView *_tableView;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    [self.view addSubview:_tableView];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        _dataArray = [DataModel arrayModel];
+        [_tableView reloadData];
+    });
+
+    
 }
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [_dataArray count];
+}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Cell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!cell) {
+        cell = [[Cell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    }
+    cell.model = _dataArray[indexPath.row];
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DataModel *model = _dataArray[indexPath.row];
+    return model.cellHigh;
 }
 
 
